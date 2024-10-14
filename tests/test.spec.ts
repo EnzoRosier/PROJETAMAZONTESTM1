@@ -10,6 +10,6 @@ test('Test Meilleures Ventes', async({MeilleuresVentes}) => {
  await MeilleuresVentes.BasicForm()
 });
 
-test('Changer la langue du site', async({FormLayouts})=>{
-   // await FormLayouts.LangueForm()
+test('Changer la langue du site', async({ChangerLangue})=>{
+   await ChangerLangue.BasicForm()
 })
