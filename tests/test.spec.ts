@@ -1,10 +1,8 @@
 import { test } from './fixtures'
 
 test.beforeEach(async({page}) => {
- await page.goto('http://localhost:4200/')
- await page.getByText('Forms').click()
- await page.getByText('Form Layouts').click()
+ await page.goto('https://www.amazon.fr/')
  })
-test('Form Layouts page', async({FormLayouts}) => {
- await FormLayouts.BasicForm()
+test('Test Meilleures Ventes', async({MeilleuresVentes}) => {
+ await MeilleuresVentes.BasicForm()
 });

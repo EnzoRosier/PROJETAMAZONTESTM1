@@ -1,9 +1,9 @@
 import { test as base } from '@playwright/test';
-import { FormLayoutsPage } from './FormLayoutsPage';
+import { MeilleuresVentes } from './MeilleuresVentes';
 
 const test = base.extend({
- FormLayouts: async ({ page }, use) => {
- await use(new FormLayoutsPage(page));
+ MeilleuresVentes: async ({ page }, use) => {
+ await use(new MeilleuresVentes(page));
  },
 });
 
