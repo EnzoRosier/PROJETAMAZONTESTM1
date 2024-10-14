@@ -10,6 +10,6 @@ export class MeilleuresVentes {
     }
 
     async BasicForm() {
-        
+        await this.page.locator("#ip-nav-flyout").click()
     }
 }
