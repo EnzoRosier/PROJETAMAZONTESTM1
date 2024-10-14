@@ -3,7 +3,7 @@ import { test } from './fixtures'
 
 test.beforeEach(async({page}) => {
  await page.goto('https://www.amazon.fr/')
- await page.locator('nb-card').filter({ hasText: 'Accepter' }).getByRole('button').click()
+ await page.locator("#sp-cc-accept").click()
 
  });
 
