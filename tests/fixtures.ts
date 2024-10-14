@@ -3,11 +3,12 @@ import { MeilleuresVentes } from './MeilleuresVentes';
 import { ChangerLangue } from './ChangerLangue';
 
 const test = base.extend({
- MeilleuresVentes: async ({ page }, use) => {
- await use(new ChangerLangue(page));
- await use(new MeilleuresVentes(page));
- 
- },
+  MeilleuresVentes: async ({ page }, use) => {
+    await use(new MeilleuresVentes(page));
+  },
+  ChangerLangue: async ({ page }, use) => {
+    await use(new ChangerLangue(page));
+  },
 });
 
 const expect = base.expect;
