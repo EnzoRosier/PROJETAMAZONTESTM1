@@ -15,7 +15,7 @@ const test = base.extend({
   ViderPanier: async ({ page }, use) => {
     await use(new ViderPanier(page));
   },
-  DerniereNouveautes: async ({ page }, use) => {
+  DernieresNouveautes: async ({ page }, use) => {
     await use(new DernieresNouveautes(page));
   },
 });
