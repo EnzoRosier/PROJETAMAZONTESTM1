@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test"
 import {faker} from '@faker-js/faker'
 
-export class MeilleuresVentes {
+export class DernieresNouveautes {
     readonly page: Page;
     readonly lienMeilleuresVentes: Locator;
     readonly changerPageHighTech : Locator;
