@@ -3,6 +3,7 @@ import { MeilleuresVentes } from './MeilleuresVentes';
 import { DernieresNouveautes } from './DerniereNouveautes';
 import { ChangerLangue } from './ChangerLangue';
 import { ViderPanier } from './ViderPanier';
+import { ChangerEmplacement } from './ChangerEmplacement';
 
 const test = base.extend({
   MeilleuresVentes: async ({ page }, use) => {
@@ -18,6 +19,10 @@ const test = base.extend({
   DernieresNouveautes: async ({ page }, use) => {
     await use(new DernieresNouveautes(page));
   },
+  ChangerEmplacement: async ({ page }, use) => {
+    await use(new ChangerEmplacement(page));
+  }
+
 });
 
 const expect = base.expect;
