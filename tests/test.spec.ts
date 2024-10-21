@@ -16,8 +16,8 @@ test('Test Meilleures Ventes', async({MeilleuresVentes}) => {
 test('Test Dernières Nouveautés', async({DernieresNouveautes}) => {
    await DernieresNouveautes.BaseTest();
   });
-  test('Test Tous les livres', async({TousLesLivres}) => {
-   await TousLesLivres.BaseTest()
+  test('Test Chercher PS5', async({ChercherPS5}) => {
+   await ChercherPS5.BaseTest()
   });
 
 test('Changer la langue du site', async({ChangerLangue})=>{
