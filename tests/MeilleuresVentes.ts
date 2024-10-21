@@ -9,7 +9,9 @@ export class MeilleuresVentes {
     constructor(page: Page){
         this.page = page
         this.hamburgerMenu = page.locator('#nav-hamburger-menu')
-        this.LienMeilleuresVentes = page.locator('a').filter({hasText : "Meilleures ventes"})
+        this.LienMeilleuresVentes = page.locator("#hmenu-content")
+        .locator("div").filter({hasText : "Tendances"})
+        .locator('a').filter({hasText : "Meilleures ventes"}[1])
     }
 
     async BasicForm() {
