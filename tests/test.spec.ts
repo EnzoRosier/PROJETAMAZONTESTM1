@@ -3,8 +3,9 @@ import { test } from './fixtures'
 
 test.beforeEach(async({page}) => {
  await page.goto('https://www.amazon.fr/') // le lien d'amazon
- if( await page.locator("#sp-cc-accept")!=undefined){
-    await page.locator("#sp-cc-accept").click() // permet de passer l'étape des cookies
+ const acceptButton = page.locator("#sp-cc-accept");
+ if (await acceptButton.count() > 0) { // Vérifie si l'élément existe
+     await acceptButton.click(); // Clique sur le bouton
  }
  
 
