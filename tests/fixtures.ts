@@ -19,6 +19,10 @@ const test = base.extend({
   DerniereNouveautes: async ({ page }, use) => {
     await use(new DernieresNouveautes(page));
   },
+  ChangerEmplacement: async ({ page }, use) => {
+    await use(new ChangerEmplacement(page));
+  }
+
 });
 
 const expect = base.expect;
