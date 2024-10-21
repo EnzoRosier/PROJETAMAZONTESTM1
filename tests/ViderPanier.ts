@@ -13,6 +13,6 @@ export class ViderPanier {
 
     async BasicForm() {
         await this.bouttonSuppr.click()
-        await expect(this.page.getByText("a été supprimé de Votre panier.")).toBeVisible()
+        await expect(this.page.getByText("Votre panier Amazon est vide")).toBeVisible()
     }
 }
