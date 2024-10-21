@@ -3,19 +3,18 @@ import {faker} from '@faker-js/faker'
 
 export class MeilleuresVentes {
     readonly page: Page;
-    readonly hamburgerMenu: Locator;
-    readonly LienMeilleuresVentes: Locator;
+    readonly lienMeilleuresVentes: Locator;
+    readonly changerPageHighTech : Locator;
     
     constructor(page: Page){
         this.page = page
-        this.hamburgerMenu = page.locator('#nav-hamburger-menu')
-        this.LienMeilleuresVentes = page.locator("#hmenu-content")
-        .locator("div").filter({hasText : "Tendances"})
-        .locator('a').filter({hasText : "Meilleures ventes"}[1])
+        this.lienMeilleuresVentes = page.locator(".nav-a").filter({hasText : "Meilleures ventes"});
+        this.changerPageHighTech = page.locator("#a-autoid-1");
     }
 
     async BasicForm() {
-        await this.hamburgerMenu.click()
-        await this.LienMeilleuresVentes.click()
+        await this.lienMeilleuresVentes.click();
+        await this.changerPageHighTech.click();
+        await expect(await this.page.url()).toEqual("https://www.amazon.fr/gp/bestsellers/?ref_=nav_cs_bestsellers")
     }
 }
