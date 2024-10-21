@@ -1,3 +1,4 @@
+import { DernieresNouveautes } from './DerniereNouveautes';
 import { test } from './fixtures'
 
 
@@ -11,8 +12,11 @@ test.beforeEach(async({page}) => {
  });
 
 test('Test Meilleures Ventes', async({MeilleuresVentes}) => {
- await MeilleuresVentes.BasicForm()
+ await MeilleuresVentes.BaseTest()
 });
+test('Test Dernières Nouveautés', async({DernieresNouveautes}) => {
+   await DernieresNouveautes.BaseTest();
+  });
 
 test('Changer la langue du site', async({ChangerLangue})=>{
    await ChangerLangue.BasicForm()
