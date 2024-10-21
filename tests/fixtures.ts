@@ -2,6 +2,7 @@ import { test as base } from '@playwright/test';
 import { MeilleuresVentes } from './MeilleuresVentes';
 import { ChangerLangue } from './ChangerLangue';
 import { ViderPanier } from './ViderPanier';
+import { ChangerEmplacement } from './ChangerEmplacement';
 
 const test = base.extend({
   MeilleuresVentes: async ({ page }, use) => {
@@ -14,6 +15,12 @@ const test = base.extend({
   ViderPanier: async ({ page }, use) => {
     await use(new ViderPanier(page));
   },
+
+  ChangerEmplacement: async ({ page }, use) => {
+    await use(new ChangerEmplacement(page));
+  }
+
+
 });
 
 const expect = base.expect;
