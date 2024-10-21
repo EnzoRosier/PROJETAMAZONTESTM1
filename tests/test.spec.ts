@@ -1,4 +1,3 @@
-import { DernieresNouveautes } from './DerniereNouveautes';
 import { test } from './fixtures'
 
 
