@@ -6,6 +6,7 @@ const test = base.extend({
   MeilleuresVentes: async ({ page }, use) => {
     await use(new MeilleuresVentes(page));
   },
+  
   ChangerLangue: async ({ page }, use) => {
     await use(new ChangerLangue(page));
   },
