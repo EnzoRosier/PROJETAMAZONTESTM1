@@ -11,6 +11,8 @@ export class ChangerEmplacement {
 
     async BasicForm() {
         await this.page.locator("#nav-global-location-popover-link").click()
+        await this.page.locator("#GLUXZipUpdateInput").fill('59290')
+        await this.page.locator('[aria-labelledby="GLUXZipUpdate-announce"]').click()
         
     }
 }
