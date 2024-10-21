@@ -10,6 +10,7 @@ export class ChangerEmplacement {
     }
 
     async BasicForm() {
+        await this.page.locator("#nav-global-location-popover-link").click()
         
     }
 }

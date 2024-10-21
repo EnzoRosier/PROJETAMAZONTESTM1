@@ -29,3 +29,7 @@ test('Vider le panier', async({page, ViderPanier})=>{
    
    await ViderPanier.BasicForm()
 });
+
+test('Changer la region de livraison', async({ChangerEmplacement})=>{
+   await ChangerEmplacement.BasicForm()
+});
