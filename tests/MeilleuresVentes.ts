@@ -15,5 +15,6 @@ export class MeilleuresVentes {
     async BasicForm() {
         await this.lienMeilleuresVentes.click();
         await this.changerPageHighTech.click();
+        await expect(await this.page.url()).toEqual("https://www.amazon.fr/gp/bestsellers/?ref_=nav_cs_bestsellers")
     }
 }
