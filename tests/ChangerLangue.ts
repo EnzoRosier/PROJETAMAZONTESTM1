@@ -10,6 +10,10 @@ export class ChangerLangue {
     }
 
     async BasicForm() {
-        await this.page.locator("#ip-nav-flyout").click()
+        await this.page.locator(".icp-nav-link-inner").click()
+        await this.page.click('input[type="radio"][value="en_GB"]', { force: true });
+        const isChecked = await this.page.isChecked('input[type="radio"][value="en_GB"]');
+        await this.page.locator('[aria-labelledby="icp-save-button-announce"]').click()
+        await this.page.locator(".icp-nav-link-inner").click()
     }
 }
