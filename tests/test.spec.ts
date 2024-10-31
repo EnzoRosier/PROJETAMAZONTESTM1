@@ -29,3 +29,12 @@ test('Vider le panier', async({page, ViderPanier})=>{
    
    await ViderPanier.BasicForm()
 });
+
+test('Changer quantite article dans panier', async({page, ViderPanier})=>{
+   await page.goto('https://www.amazon.fr/Nintendo-Super-Mario-Bros-Wonder/dp/B0C9JFT9DX/ref=sr_1_1?sr=8-1')
+   await page.locator("#add-to-cart-button").click()
+   await page.locator('input[type="submit"][aria-labelledby="attachSiNoCoverage-announce"]').click()
+   await page.locator("#nav-cart-count").click()
+   
+   await ViderPanier.BasicForm()
+});
