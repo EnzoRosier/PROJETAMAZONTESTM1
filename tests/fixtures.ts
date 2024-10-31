@@ -5,6 +5,8 @@ import { ChangerLangue } from './ChangerLangue';
 import { ViderPanier } from './ViderPanier';
 import { ChangerEmplacement } from './ChangerEmplacement';
 import { ChercherPS5 } from './ChercherPS5';
+import { ChangerQuantPanier } from './ChangerQuantPanier';
+import { AjouterPanierQuantDiff } from './AjouterPanierQuantDiff';
 
 const test = base.extend({
   MeilleuresVentes: async ({ page }, use) => {
@@ -25,6 +27,12 @@ const test = base.extend({
   },
   ChercherPS5: async ({ page }, use) => {
     await use(new ChercherPS5(page));
+  },
+  ChangerQuantPanier: async ({ page }, use) => {
+    await use(new ChangerQuantPanier(page));
+  },
+  AjouterPanierQuantDiff: async ({ page }, use) => {
+    await use(new AjouterPanierQuantDiff(page));
   }
 
 });

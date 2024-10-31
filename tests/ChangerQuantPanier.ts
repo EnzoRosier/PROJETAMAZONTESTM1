@@ -3,16 +3,16 @@ import {faker} from '@faker-js/faker'
 
 export class ChangerQuantPanier {
     readonly page: Page;
-    readonly bouttonSuppr: Locator;
+    readonly bouttonQuant2: Locator;
     
     constructor(page: Page){
         this.page = page
-        this.bouttonSuppr = page.locator('input[type="submit"][aria-label="Supprimer Super Mario Bros. Wonder"]')
     
     }
 
     async BasicForm() {
-        await this.bouttonSuppr.click()
-        await expect(this.page.getByText("Votre panier Amazon est vide")).toBeVisible()
+        await this.page.getByText('Qté :1').click()
+        await this.page.getByRole('option', { name: '2' }).locator('#quantity_2').click()
+        await expect(this.page.getByText("Qté :2")).toBeVisible()
     }
 }
