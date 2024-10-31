@@ -49,3 +49,7 @@ test('Changer quantite panier', async({page, ChangerQuantPanier})=>{
 test('Ajouter produit avec quantite differentes', async({AjouterPanierQuantDiff})=>{
    await AjouterPanierQuantDiff.BasicForm()
 });
+
+test('bonjour', async({AjouterArticlesFrequents})=>{
+   await AjouterArticlesFrequents.BasicForm()
+})

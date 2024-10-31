@@ -33,10 +33,10 @@ const test = base.extend({
     await use(new ChangerQuantPanier(page));
   },
   AjouterPanierQuantDiff: async ({ page }, use) => {
-    await use(new AjouterArticlesFrequents(page));
+    await use(new AjouterPanierQuantDiff(page));
   },
   AjouterArticlesFrequents: async ({ page }, use) => {
-    await use(new AjouterPanierQuantDiff(page));
+    await use(new AjouterArticlesFrequents(page));
   }
 
 });
