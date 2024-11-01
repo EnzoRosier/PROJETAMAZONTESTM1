@@ -50,11 +50,8 @@ test('Ajouter produit avec quantité différente', async({AjouterPanierQuantDiff
    await AjouterPanierQuantDiff.BasicForm()
 });
 
-test('Ajouter produits achetés frequement au panier', async({page,AjouterArticlesFrequents})=>{
+test('Visiter boutique du marchand', async({page,AjouterArticlesFrequents})=>{
    await page.goto('https://www.amazon.fr/Nintendo-Super-Mario-Bros-Wonder/dp/B0C9JFT9DX/ref=sr_1_1?sr=8-1')
-   await page.locator("#add-to-cart-button").click()
-   await page.locator('input[type="submit"][aria-labelledby="attachSiNoCoverage-announce"]').click()
-   await page.locator("#nav-cart-count").click()
    
    await AjouterArticlesFrequents.BasicForm()
 });
