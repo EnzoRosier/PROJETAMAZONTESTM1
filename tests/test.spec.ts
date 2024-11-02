@@ -1,4 +1,7 @@
+import { AccederPanier } from './AccederPanier';
+import { AjouterElementPanier } from './AjouterElementPanier';
 import { test } from './fixtures'
+import { RechercherArticle } from './RechercherArticle';
 
 
 test.beforeEach(async({page}) => {
@@ -54,4 +57,17 @@ test('Visiter boutique du marchand', async({page,AjouterArticlesFrequents})=>{
    await page.goto('https://www.amazon.fr/Nintendo-Super-Mario-Bros-Wonder/dp/B0C9JFT9DX/ref=sr_1_1?sr=8-1')
    
    await AjouterArticlesFrequents.BasicForm()
+});
+
+test('Vérifier la cohérence des résultats de recherche Amazon', async ({RechercherArticle}) => {
+   await RechercherArticle.BaseTest("The Last Of Us")
+});
+
+test('Ajouter un article au panier', async ({page,AjouterElementPanier}) => {
+   await page.goto("https://www.amazon.fr/gp/product/B0CPFW7WVM/ref=ox_sc_act_title_1?smid=A1X6FK5RDHNB96&psc=1")
+   await AjouterElementPanier.BaseTest()
+});
+
+test('Accéder au panier', async({AccederPanier})=>{
+   await AccederPanier.BaseTest();
 });

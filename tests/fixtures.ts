@@ -8,6 +8,9 @@ import { ChercherPS5 } from './ChercherPS5';
 import { ChangerQuantPanier } from './ChangerQuantPanier';
 import { AjouterPanierQuantDiff } from './AjouterPanierQuantDiff';
 import { AjouterArticlesFrequents } from './AjouterArticlesFrequents';
+import { RechercherArticle } from './RechercherArticle';
+import { AjouterElementPanier } from './AjouterElementPanier';
+import { AccederPanier } from './AccederPanier';
 
 const test = base.extend({
   MeilleuresVentes: async ({ page }, use) => {
@@ -37,6 +40,15 @@ const test = base.extend({
   },
   AjouterArticlesFrequents: async ({ page }, use) => {
     await use(new AjouterArticlesFrequents(page));
+  },
+  RechercherArticle:async({page},use)=>{
+    await use(new RechercherArticle(page));
+  },
+  AjouterElementPanier: async({page},use)=>{
+    await use(new AjouterElementPanier(page));
+  },
+  AccederPanier:async({page},use)=>{
+    await use(new AccederPanier(page));
   }
 
 });
