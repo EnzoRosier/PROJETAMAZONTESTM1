@@ -66,17 +66,10 @@ test('Accéder au panier', async({AccederPanier})=>{
    await AccederPanier.BaseTest();
 });
 
-<<<<<<< HEAD
 test('Login', async ({ page }) => {
    const loginAmazon = new LoginAmazon(page);
    await loginAmazon.login('alixe.maerte@gmail.com', 'TRUCMUCH12');
 });
-=======
-// test('Login', async ({ page }) => {
-//    const loginAmazon = new LoginAmazon(page);
-//    await loginAmazon.login('ton_email@example.com', 'ton_mot_de_passe');
-// });
->>>>>>> 18fdb7d5e430c1297106130758f210873ae3b9c8
 
 // test('Logout', async ({ page }) => {
 //    const logoutAmazon = new LogoutAmazon(page);
