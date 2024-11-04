@@ -29,6 +29,6 @@ export class CreateAccountAmazon {
         await this.passwordInput.fill(randomPassword);
         await this.passwordCheckInput.fill(randomPassword);
         await this.submitButton.click();
-        await expect(this.page).toHaveURL(/\/ap\/signin/);
+        await expect(this.page.locator('iframe[title="verification puzzle"]').contentFrame().getByRole('heading', { name: 'Résoudre ce puzzle pour proté' })).toBeVisible();
     }
 }

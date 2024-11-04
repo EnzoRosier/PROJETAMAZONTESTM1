@@ -32,11 +32,6 @@ test('Changer la langue du site', async({ChangerLangue})=>{
 });
 
 test('Vider le panier', async({page, ViderPanier})=>{
-   await page.goto('https://www.amazon.fr/Nintendo-Super-Mario-Bros-Wonder/dp/B0C9JFT9DX/ref=sr_1_1?sr=8-1')
-   await page.locator("#add-to-cart-button").click()
-   await page.locator('input[type="submit"][aria-labelledby="attachSiNoCoverage-announce"]').click()
-   await page.locator("#nav-cart-count").click()
-   
    await ViderPanier.BasicForm()
 });
 
@@ -45,10 +40,6 @@ test('Changer la region de livraison', async({ChangerEmplacement})=>{
 });
 
 test('Changer quantite panier', async({page, ChangerQuantPanier})=>{
-   await page.goto('https://www.amazon.fr/Nintendo-Super-Mario-Bros-Wonder/dp/B0C9JFT9DX/ref=sr_1_1?sr=8-1')
-   await page.locator("#add-to-cart-button").click()
-   await page.locator('input[type="submit"][aria-labelledby="attachSiNoCoverage-announce"]').click()
-   await page.locator("#nav-cart-count").click()
    await ChangerQuantPanier.BasicForm()
 });
 
@@ -75,15 +66,22 @@ test('Accéder au panier', async({AccederPanier})=>{
    await AccederPanier.BaseTest();
 });
 
+<<<<<<< HEAD
 test('Login', async ({ page }) => {
    const loginAmazon = new LoginAmazon(page);
    await loginAmazon.login('alixe.maerte@gmail.com', 'TRUCMUCH12');
 });
+=======
+// test('Login', async ({ page }) => {
+//    const loginAmazon = new LoginAmazon(page);
+//    await loginAmazon.login('ton_email@example.com', 'ton_mot_de_passe');
+// });
+>>>>>>> 18fdb7d5e430c1297106130758f210873ae3b9c8
 
-test('Logout', async ({ page }) => {
-   const logoutAmazon = new LogoutAmazon(page);
-   await logoutAmazon.logout();
-});
+// test('Logout', async ({ page }) => {
+//    const logoutAmazon = new LogoutAmazon(page);
+//    await logoutAmazon.logout();
+// });
 
 test('Create Account', async ({ page }) => {
    const createAccountAmazon = new CreateAccountAmazon(page);
