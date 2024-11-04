@@ -11,6 +11,8 @@ import { AjouterArticlesFrequents } from './AjouterArticlesFrequents';
 import { RechercherArticle } from './RechercherArticle';
 import { AjouterElementPanier } from './AjouterElementPanier';
 import { AccederPanier } from './AccederPanier';
+import { CreateAccountAmazon } from './CreateAccount';
+import { LoginAmazon } from './Login';
 
 const test = base.extend({
   MeilleuresVentes: async ({ page }, use) => {
@@ -49,8 +51,13 @@ const test = base.extend({
   },
   AccederPanier:async({page},use)=>{
     await use(new AccederPanier(page));
+  },
+  CreateAccount:async({page},use)=>{
+    await use(new CreateAccountAmazon(page));
+  },
+  Login:async({page},use)=>{
+    await use(new LoginAmazon(page));
   }
-
 });
 
 const expect = base.expect;

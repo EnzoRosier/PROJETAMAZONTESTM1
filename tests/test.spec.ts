@@ -66,17 +66,12 @@ test('Accéder au panier', async({AccederPanier})=>{
    await AccederPanier.BaseTest();
 });
 
-test('Login', async ({ page }) => {
+test('Login', async ({ page,Login }) => {
    const loginAmazon = new LoginAmazon(page);
    await loginAmazon.login('alixe.maerte@gmail.com', 'TRUCMUCH12');
 });
 
-// test('Logout', async ({ page }) => {
-//    const logoutAmazon = new LogoutAmazon(page);
-//    await logoutAmazon.logout();
-// });
-
-test('Create Account', async ({ page }) => {
+test('Create Account', async ({ page,CreateAccount }) => {
    const createAccountAmazon = new CreateAccountAmazon(page);
    await createAccountAmazon.createAccount();
 });
