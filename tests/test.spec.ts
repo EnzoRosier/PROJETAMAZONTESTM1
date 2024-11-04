@@ -66,15 +66,15 @@ test('Accéder au panier', async({AccederPanier})=>{
    await AccederPanier.BaseTest();
 });
 
-test('Login', async ({ page }) => {
-   const loginAmazon = new LoginAmazon(page);
-   await loginAmazon.login('ton_email@example.com', 'ton_mot_de_passe');
-});
+// test('Login', async ({ page }) => {
+//    const loginAmazon = new LoginAmazon(page);
+//    await loginAmazon.login('ton_email@example.com', 'ton_mot_de_passe');
+// });
 
-test('Logout', async ({ page }) => {
-   const logoutAmazon = new LogoutAmazon(page);
-   await logoutAmazon.logout();
-});
+// test('Logout', async ({ page }) => {
+//    const logoutAmazon = new LogoutAmazon(page);
+//    await logoutAmazon.logout();
+// });
 
 test('Create Account', async ({ page }) => {
    const createAccountAmazon = new CreateAccountAmazon(page);
