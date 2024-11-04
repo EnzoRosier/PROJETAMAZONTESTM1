@@ -13,7 +13,7 @@ export class LogoutAmazon {
     }
 
     async logout() {
-        await this.page.goto('https://www.amazon.fr/');
+        await this.page.goto('https://www.amazon.fr/gp/flex/sign-out.html?path=%2Fgp%2Fyourstore%2Fhome&signIn=1&useRedirectOnSuccess=1&action=sign-out&ref_=nav_AccountFlyout_signout');
         await this.accountMenu.hover();
         await this.signOutButton.click();
         await expect(this.page).toHaveURL(/\/ap\/signin/);

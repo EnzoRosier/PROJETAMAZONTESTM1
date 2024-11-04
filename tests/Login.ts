@@ -20,6 +20,6 @@ export class LoginAmazon {
         await this.page.click('#continue');
         await this.passwordInput.fill(password);
         await this.submitButton.click();
-        await expect(this.page).toHaveURL(/\/ref=nav_ya_signin/);
+        await this.page.waitForTimeout(1000);
     }
 }

@@ -77,7 +77,7 @@ test('Accéder au panier', async({AccederPanier})=>{
 
 test('Login', async ({ page }) => {
    const loginAmazon = new LoginAmazon(page);
-   await loginAmazon.login('ton_email@example.com', 'ton_mot_de_passe');
+   await loginAmazon.login('alixe.maerte@gmail.com', 'TRUCMUCH12');
 });
 
 test('Logout', async ({ page }) => {
